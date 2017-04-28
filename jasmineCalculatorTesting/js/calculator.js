@@ -24,4 +24,10 @@ describe('calculatorSuite', function() {
 	it('should subtract two numbers', function() {
 		expect(calculator.subtract(90,8)).toBe(82);
 	});
+	it('should multiply two numbers to get the product', function() {
+		expect(calculator.multiply(8,8)).toBe(64);
+	});
+	it('should divide two numbers to get the quotient', function() {
+		expect(calculator.divide(81,9)).toBe(9);
+	});
 });
