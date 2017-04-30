@@ -35,6 +35,9 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        it('name is defined', function() {
+            
+        })
 
     });
     /* TODO: Write a new test suite named "The menu" */
