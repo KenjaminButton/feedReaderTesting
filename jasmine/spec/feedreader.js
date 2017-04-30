@@ -24,6 +24,9 @@ $(function() {
         it('URL is defined', function () {
             allFeeds.forEach(function (feed) {
                 feedUrl = feed.url;
+                // It's always more efficient to access a static DOM 
+                // element once and store it in a variable rather 
+                // than accessing it multiple times.
                 expect(feedUrl).toBeDefined();
                 expect(feedUrl.length).not.toBe(0);
             });
@@ -32,6 +35,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+
     });
     /* TODO: Write a new test suite named "The menu" */
     /* TODO: Write a test that ensures the menu element is
