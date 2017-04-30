@@ -21,7 +21,7 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it('URL is defined', function () {
+        it('url is defined', function () {
             allFeeds.forEach(function (feed) {
                 feedUrl = feed.url;
                 // It's always more efficient to access a static DOM 
@@ -36,8 +36,14 @@ $(function() {
          * and that the name is not empty.
          */
         it('name is defined', function() {
-            
-        })
+            allFeeds.forEach(function(feed) {
+                feedName = feed.name;
+                expect(feedName).toBeDefined();
+                expect(feedUrl.length).not.toBe(0);
+            });
+        });
+
+
 
     });
     /* TODO: Write a new test suite named "The menu" */
