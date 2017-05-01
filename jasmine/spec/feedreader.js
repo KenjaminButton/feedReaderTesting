@@ -4,34 +4,27 @@
  * all of the tests that will be run against your application.
  */
 /* All of my tests are within the $() function
- * Ensure that tests won't run until the DOM is ready.
+ * This is done to ensure that tests won't run until the DOM is ready.
  */
 $(function() {
-    /* This is our first test suite - a test suite just contains
-     * a related set of tests. This suite is all about the RSS
-     * feeds definitions, the allFeeds variable in our application.
+    /* This suite is all about the RSS
+     * feeds definitions and the allFeeds variable in our application.
      */
-    describe('RSS Feeds', function() {
-
+     // https://jasmine.github.io/2.0/introduction.html
+     describe('RSS Feeds', function() {
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         */
+// Wrote a test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.  
         it('url is defined', function () {
             allFeeds.forEach(function (feed) {
                 feedUrl = feed.url;
-                // It's always more efficient to access a static DOM 
-                // element once and store it in a variable rather 
-                // than accessing it multiple times.
                 expect(feedUrl).toBeDefined();
                 expect(feedUrl.length).not.toBe(0);
             });
         });
-        /* TODO: Write a test that loops through each feed
+        /* Wrote a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
@@ -43,15 +36,28 @@ $(function() {
             });
         });
     });
-    /* TODO: Write a new test suite named "The menu" */
+    /* Wrote a  test suite named "The menu" */
     describe('The menu', function () {
-        
-    })
-    /* TODO: Write a test that ensures the menu element is
-     * hidden by default. You'll have to analyze the HTML and
+        // test that ensures the menu element is hidden by default
+        it('has an element hidden by default', function() {
+// hasClass implementation found here
+// http://stackoverflow.com/questions/20268128/how-to-test-if-an-element-has-class-using-protractor
+// boolean values used to check hasClass
+        expect($('body').hasClass('menu-hidden')).toBe(true);
+        });
+
+        it('is hiding the menu', function () {
+            expect($('menu-hidden')).toBeTruthy()
+        });
+
+    });
+    /* TODO: . You'll have to analyze the HTML and
      * the CSS to determine how we're performing the
      * hiding/showing of the menu element.
      */
+        // Test to perform the hiding/showing of the menu element
+
+
     /* TODO: Write a test that ensures the menu changes
      * visibility when the menu icon is clicked. This test
      * should have two expectations: does the menu display when
