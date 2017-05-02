@@ -59,9 +59,15 @@ $(function() {
         });
     });
 
-// Write a new test suite named "Initial Entries"
+// Wrote a new test suite named "Initial Entries"
     describe('Initial Entries', function () {
-
+// Wrote a test that ensure when the loadFeed function is called,
+// its work is complete. The loadFeed() is asynchronous so this test requires 
+// Jasmine's beforeEach & asynchronous done() function.
+// http://stackoverflow.com/questions/17317839/how-to-reuse-beforeeach-aftereach-in-jasmine-js
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
     });
 
     
