@@ -61,12 +61,19 @@ $(function() {
 
 // Wrote a new test suite named "Initial Entries"
     describe('Initial Entries', function () {
-// Wrote a test that ensure when the loadFeed function is called,
-// its work is complete. The loadFeed() is asynchronous so this test requires 
-// Jasmine's beforeEach & asynchronous done() function.
+// Wrote a test that ensure when the loadFeed function is called and 
+// its work is complete. The loadFeed() is asynchronous so this test  
+// requires Jasmine's beforeEach & asynchronous done() function.
 // http://stackoverflow.com/questions/17317839/how-to-reuse-beforeeach-aftereach-in-jasmine-js
-        beforeEach(function(done) {
+        beforeEach(function (done) {
             loadFeed(0, done);
+        });
+        it('has something greater than zero 0', function (done) {
+// feed refers to line 35 in index.html and entry in line index.html line 38
+// not.toBe found from the following:
+// https://jasmine.github.io/2.0/introduction.html
+            expect($('.feed .entry').length).not.toBe([0]);
+            done();
         });
     });
 
