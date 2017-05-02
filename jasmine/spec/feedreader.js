@@ -7,9 +7,9 @@
  * This is done to ensure that tests won't run until the DOM is ready.
  */
 $(function() {
-    /* This suite is all about the RSS
-     * feeds definitions and the allFeeds variable in our application.
-     */
+// This suite is all about the RSS
+// feeds definitions and the allFeeds variable in our application.
+    
      // https://jasmine.github.io/2.0/introduction.html
      describe('RSS Feeds', function() {
         it('are defined', function() {
@@ -24,10 +24,10 @@ $(function() {
                 expect(feedUrl.length).not.toBe(0);
             });
         });
-        /* Wrote a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
+// Wrote a test that loops through each feed
+// in the allFeeds object and ensures it has a name defined
+// and that the name is not empty.
+        
         it('name is defined', function() {
             allFeeds.forEach(function(feed) {
                 feedName = feed.name;
@@ -36,7 +36,7 @@ $(function() {
             });
         });
     });
-    /* Wrote a  test suite named "The menu" */
+/* Wrote a  test suite named "The menu" */
     describe('The menu', function () {
         // test that ensures the menu element is hidden by default
         it('has an element hidden by default', function() {
@@ -45,7 +45,10 @@ $(function() {
 // http://stackoverflow.com/questions/32615713/tobetrue-vs-tobetruthy-vs-tobetrue
         expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
-
+// Wrote a test to ensure the menu changes
+// visibility when the menu icon is clicked. This test
+// should have two expectations: does the menu display when
+// clicked and does it hide when clicked again.
         it('switches the visibility upon clicking on the icon', function() {
 // refers to index.html file line 29
             $('a.menu-icon-link').click();
@@ -55,19 +58,13 @@ $(function() {
             expect(document.body.className).toContain('menu-hidden');
         });
     });
-    /* TODO: . You'll have to analyze the HTML and
-     * the CSS to determine how we're performing the
-     * hiding/showing of the menu element.
-     */
-        // Test to perform the hiding/showing of the menu element
 
+// Write a new test suite named "Initial Entries"
+    describe('Initial Entries', function () {
 
-    /* TODO: Write a test that ensures the menu changes
-     * visibility when the menu icon is clicked. This test
-     * should have two expectations: does the menu display when
-     * clicked and does it hide when clicked again.
-     */
-    /* TODO: Write a new test suite named "Initial Entries" */
+    });
+
+    
     /* TODO: Write a test that ensures when the loadFeed
      * function is called and completes its work, there is at least
      * a single .entry element within the .feed container.
