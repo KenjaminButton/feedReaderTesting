@@ -42,14 +42,18 @@ $(function() {
         it('has an element hidden by default', function() {
 // hasClass implementation found here
 // http://stackoverflow.com/questions/20268128/how-to-test-if-an-element-has-class-using-protractor
-// boolean values used to check hasClass
-        expect($('body').hasClass('menu-hidden')).toBe(true);
+// http://stackoverflow.com/questions/32615713/tobetrue-vs-tobetruthy-vs-tobetrue
+        expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
-        it('is hiding the menu', function () {
-            expect($('menu-hidden')).toBeTruthy()
+        it('switches the visibility upon clicking on the icon', function() {
+// refers to index.html file line 29
+            $('a.menu-icon-link').click();
+            expect(document.body.className).not.toContain('menu-hidden');
+// refers to index.html file line 29            
+            $('a.menu-icon-link').click();
+            expect(document.body.className).toContain('menu-hidden');
         });
-
     });
     /* TODO: . You'll have to analyze the HTML and
      * the CSS to determine how we're performing the
