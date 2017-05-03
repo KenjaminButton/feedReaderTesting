@@ -50,10 +50,11 @@ $(function() {
         it('switches the visibility upon clicking on the icon', function() {
             // refers to index.html file line 29
             $('a.menu-icon-link').click();
-            expect(document.body.className).not.toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
             // refers to index.html file line 29            
             $('a.menu-icon-link').click();
             expect(document.body.className).toContain('menu-hidden');
+
         });
     });
     // Wrote a new test suite named "Initial Entries"
@@ -65,12 +66,14 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, done);
         });
-        it('has something greater than zero 0', function(done) {
+        it('has something not to be less than 1', function (done) {
             // feed refers to line 35 in index.html and entry in line index.html line 38
             // not.toBe found from the following:
             // https://jasmine.github.io/2.0/introduction.html
-            expect($('.feed .entry').length).not.toBe([0]);
-            done();
+            // How I got "not.toBeLessThan(1)"
+            // http://stackoverflow.com/questions/24090270/how-can-i-test-that-a-value-is-greater-than-or-equal-to-in-jasmine
+            expect($('.feed .entry').length).not.toBeLessThan(1);
+            // done();
         });
     });
     // Wrote a new test suite named "New Feed Selection"
@@ -78,7 +81,7 @@ $(function() {
         // Store two the variable values for two feeds after loading
         var feedPrior;
         var feedLatter;
-        beforeEach(function(done) {
+        beforeEach(function (done) {
             // run before and after asynchronous specs in jasmine 2.0
             // https://github.com/jasmine/jasmine/issues/526
             // loadFeed function referenced in line 38 of app.js file handles async
