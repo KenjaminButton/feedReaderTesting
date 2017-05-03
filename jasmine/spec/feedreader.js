@@ -30,7 +30,7 @@ $(function() {
             allFeeds.forEach(function(feed) {
                 feedName = feed.name;
                 expect(feedName).toBeDefined();
-                expect(feedUrl.length).not.toBe(0);
+                expect(feedName.length).not.toBe(0);
             });
         });
     });
