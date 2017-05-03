@@ -95,7 +95,11 @@ $(function() {
         });
     });
 
-
+    it('ensures new feed is loaded by loadFeed function', function (done) {
+        loadFeed(1, function () {
+            done();
+        });
+    });
 
 
 
