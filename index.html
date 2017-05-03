@@ -8,11 +8,9 @@
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/icomoon.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Begin favicon -->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
-    <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
-    <!-- End favicon -->
+    <link href="css/style.css" rel="stylesheet"><!-- Begin favicon -->
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="http://eg.com/favicon.png" rel="shortcut icon" type="image/png"><!-- End favicon -->
     <!-- Begin Jasmine Install -->
     <!-- https://jasmine.github.io/ -->
     <link href="jasmine/lib/jasmine-2.1.2/jasmine.css" rel="stylesheet">
@@ -21,8 +19,7 @@
     <script src="jasmine/lib/jasmine-2.1.2/jasmine-html.js">
     </script>
     <script src="jasmine/lib/jasmine-2.1.2/boot.js">
-    </script>
-    <!-- End Jasmine install -->
+    </script><!-- End Jasmine install -->
 </head>
 <body class="menu-hidden">
     <div class="header">
@@ -34,38 +31,37 @@
     </div>
     <div class="feed"></div>
     <script class="tpl-entry" type="text/x-handlebars-template">
-               <a class="entry-link" href="{{link}}">
-                   <article class="entry">
-                       <h2>{{title}}</h2>
-                       <p>{{contentSnippet}}</p>
-                   </article>
-               </a>
+                  <a class="entry-link" href="{{link}}">
+                      <article class="entry">
+                          <h2>{{title}}</h2>
+                          <p>{{contentSnippet}}</p>
+                      </article>
+                  </a>
     </script> 
     <script class="tpl-feed-list-item" type="text/x-handlebars-template">
-               <li>
-                   <a href="#" data-id="{{id}}">{{name}}</a>
-               </li>
-    </script> 
-    <!-- Begin JQuery CDN -->
+                  <li>
+                      <a href="#" data-id="{{id}}">{{name}}</a>
+                  </li>
+    </script> <!-- Begin JQuery CDN -->
+     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-    </script> 
-    <!-- End JQuery CDN -->
-    <!-- Begin JSDelivr -->
-    <!-- https://www.jsdelivr.com/ -->
+    </script> <!-- End JQuery CDN -->
+     <!-- Begin JSDelivr -->
+     <!-- https://www.jsdelivr.com/ -->
+     
     <script src="http://cdn.jsdelivr.net/handlebarsjs/2.0.0/handlebars.min.js">
-    </script> 
-    <!-- End JSDelivr -->
-    <!-- Begin Google JS API Feedreader -->
+    </script> <!-- End JSDelivr -->
+     <!-- Begin Google JS API Feedreader -->
+     
     <script src="http://google.com/jsapi">
-    </script> 
-    <!-- End Google JS API Feedreader  -->
-    <!-- Begin main editing file -->
+    </script> <!-- End Google JS API Feedreader  -->
+     <!-- Begin main editing file -->
+     
     <script src="js/app.js">
-    </script> 
-    <!-- End main editing file -->
-    <!-- Begin specifications testing -->
+    </script> <!-- End main editing file -->
+     <!-- Begin specifications testing -->
+     
     <script src="jasmine/spec/feedreader.js">
-    </script>
-    <!-- End specifications testing -->
+    </script> <!-- End specifications testing -->
 </body>
 </html>
