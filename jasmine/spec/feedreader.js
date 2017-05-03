@@ -80,17 +80,29 @@ $(function() {
 // Wrote a new test suite named "New Feed Selection"
     describe('New Feed Selection', function() {
 // Store two the variable values for two feeds after loading
-        var feedPrior;
-        var feedLatter;
+    var feedPrior;
+    var feedLatter;
+
+    beforeEach(function (done) {
+// run before and after asynchronous specs in jasmine 2.0
+// https://github.com/jasmine/jasmine/issues/526
+// loadFeed function referenced in line 38 of app.js file handles async
+    loadFeed(0, function() {
+// refers to div class feed in line 35 of index.html file
+        feedPrior = $('.feed').html();
+// calls the feed asynchronously
+            done();
+        });
+    });
 
 
 
-// loadFeed function referenced in line 38 of app.js file
 
 
 
-    })
 
+
+    });
     /* TODO: Write a test that ensures when a new feed is loaded
      * by the loadFeed function that the content actually changes.
      * Remember, loadFeed() is asynchronous.
