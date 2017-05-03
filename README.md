@@ -15,6 +15,8 @@ Install Jasmine 2.0
 
 # Helpful Links:
 
+	how to write a Jasmine test for a webpage that has HTML and JavaScript or jQuery?
+<!-- http://stackoverflow.com/questions/15729407/how-to-write-a-jasmine-test-for-a-webpage-that-has-html-and-javascript-or-jquery -->
 	hasClass implementation in Jasmine 2.0
 <!-- http://stackoverflow.com/questions/20268128/how-to-test-if-an-element-has-class-using-protractor -->
 <!-- http://stackoverflow.com/questions/32615713/tobetrue-vs-tobetruthy-vs-tobetrue -->
