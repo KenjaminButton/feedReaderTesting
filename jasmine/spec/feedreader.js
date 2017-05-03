@@ -79,6 +79,15 @@ $(function() {
     });
 // Wrote a new test suite named "New Feed Selection"
     describe('New Feed Selection', function() {
+// Store two the variable values for two feeds after loading
+        var feedPrior;
+        var feedLatter;
+
+
+
+// loadFeed function referenced in line 38 of app.js file
+
+
 
     })
 
