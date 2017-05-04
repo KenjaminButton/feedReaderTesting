@@ -53,7 +53,7 @@ $(function() {
             expect($('body').hasClass('menu-hidden')).toBe(false);
             // refers to index.html file line 29            
             $('a.menu-icon-link').click();
-            expect(document.body.className).toContain('menu-hidden');
+            expect(document.body.classList).toContain('menu-hidden');
 
         });
     });
@@ -66,14 +66,13 @@ $(function() {
         beforeEach(function(done) {
             loadFeed(0, done);
         });
-        it('has something not to be less than 1', function (done) {
+        it('has something not to be less than 1', function () {
             // feed refers to line 35 in index.html and entry in line index.html line 38
             // not.toBe found from the following:
             // https://jasmine.github.io/2.0/introduction.html
             // How I got "not.toBeLessThan(1)"
             // http://stackoverflow.com/questions/24090270/how-can-i-test-that-a-value-is-greater-than-or-equal-to-in-jasmine
             expect($('.feed .entry').length).not.toBeLessThan(1);
-            // done();
         });
     });
     // Wrote a new test suite named "New Feed Selection"
