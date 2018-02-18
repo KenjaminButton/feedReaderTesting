@@ -7,7 +7,7 @@
  */
 // The names and URLs to all of the feeds we'd like available.
 var allFeeds = [{
-    name: 'codeTaiwan.org Blog',
+    name: 'Udacity Blog',
     url: 'http://blog.udacity.com/feed'
 }, {
     name: 'CSS Tricks',
@@ -77,6 +77,7 @@ function loadFeed(id, cb) {
 /* Google API: Loads the Feed Reader API and defines what function
  * to call when the Feed Reader API is done loading.
  */
+google.load('feeds', '1');
 google.setOnLoadCallback(init);
 /* All of this functionality is heavily reliant upon the DOM, so we
  * place our code in the $() function to ensure it doesn't execute
